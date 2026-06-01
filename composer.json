@@ -1,0 +1,59 @@
+{
+    "name": "texhub/social-auth",
+    "description": "Simple, elegant social OAuth 2.0 login for any PHP framework with first-class Laravel support — Google & GitHub out of the box, easily extensible.",
+    "type": "library",
+    "keywords": ["php", "laravel", "oauth", "oauth2", "social-login", "google", "github", "authentication", "sso", "texhub"],
+    "homepage": "https://texhub.pro",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mahmudi Shodmehr",
+            "email": "info@texhub.pro",
+            "homepage": "https://texhub.pro",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://texhub.pro"
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0 || ^12.0",
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TexHub\\SocialAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TexHub\\SocialAuth\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TexHub\\SocialAuth\\Laravel\\SocialAuthServiceProvider"
+            ],
+            "aliases": {
+                "SocialAuth": "TexHub\\SocialAuth\\Laravel\\SocialAuth"
+            }
+        }
+    },
+    "suggest": {
+        "illuminate/support": "Required to use the package inside a Laravel application (service provider, facade, config publishing)."
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
