@@ -1,6 +1,6 @@
 # TexHub · Social Auth
 
-[English](README.md) · **🌐 Русский**
+[English](README.md) · **Русский**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/php-%5E8.2-777bb4.svg)](composer.json)
@@ -10,18 +10,18 @@
 
 ---
 
-## ✨ Возможности
+## Возможности
 
-- 🔐 Полный поток **OAuth 2.0 Authorization Code** «под капотом»
-- 🟢 **Google** и 🐙 **GitHub** встроены (GitHub берёт подтверждённый основной email)
-- 👤 **Нормализованный `User`** — `id`, `nickname`, `name`, `email`, `avatar`, `token`, `raw`
-- 🛡 Хелпер **CSRF-state**, кастомные scope и доп. параметры
-- 🧩 **Расширяемость** — свой провайдер в несколько строк
-- 🧪 Полностью покрыт тестами (без сети), подменяемый HTTP-транспорт
+- Полный поток **OAuth 2.0 Authorization Code** «под капотом»
+- **Google** и **GitHub** встроены (GitHub берёт подтверждённый основной email)
+- **Нормализованный `User`** — `id`, `nickname`, `name`, `email`, `avatar`, `token`, `raw`
+- Хелпер **CSRF-state**, кастомные scope и доп. параметры
+- **Расширяемость** — свой провайдер в несколько строк
+- Полностью покрыт тестами (без сети), подменяемый HTTP-транспорт
 
 ---
 
-## 📦 Установка
+## Установка
 
 ```bash
 composer require texhub/social-auth
@@ -31,7 +31,7 @@ composer require texhub/social-auth
 
 ---
 
-## 🚀 Быстрый старт
+## Быстрый старт
 
 ```php
 use TexHub\SocialAuth\SocialAuth;
@@ -69,7 +69,7 @@ $user->token->refreshToken;  // если есть (offline-доступ Google)
 
 ---
 
-## 🟢 Google / 🐙 GitHub
+## Google / GitHub
 
 Работают одинаково — просто меняете имя драйвера:
 
@@ -84,7 +84,7 @@ $user = $social->driver('github')->userFromCode($code);
 
 ---
 
-## 🧩 Свой провайдер
+## Свой провайдер
 
 ```php
 use TexHub\SocialAuth\Providers\AbstractProvider;
@@ -110,7 +110,7 @@ $social->extend('facebook', FacebookProvider::class)
 
 ---
 
-## ⚙️ Обработка ошибок
+## Обработка ошибок
 
 ```php
 use TexHub\SocialAuth\Exceptions\ApiException;
@@ -127,7 +127,7 @@ try {
 
 ---
 
-## <a name="laravel"></a>🧩 Laravel
+## <a name="laravel"></a> Laravel
 
 Регистрируется автоматически. Опубликуйте конфиг:
 
@@ -186,7 +186,7 @@ Route::get('/auth/{provider}/callback', [AuthController::class, 'callback']);
 
 ---
 
-## 🧪 Тестирование
+## Тестирование
 
 Подставьте фейковый транспорт — сеть не нужна:
 
@@ -208,7 +208,7 @@ composer install && composer test
 
 ---
 
-## 📚 Архитектура
+## Архитектура
 
 ```
 src/

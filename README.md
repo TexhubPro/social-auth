@@ -1,6 +1,6 @@
 # TexHub · Social Auth
 
-**🌐 English** · [Русский](README.ru.md)
+**English** · [Русский](README.ru.md)
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/php-%5E8.2-777bb4.svg)](composer.json)
@@ -10,18 +10,18 @@ Simple, elegant **social OAuth 2.0 login** for any PHP framework — **Google** 
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔐 **OAuth 2.0 Authorization Code** flow done for you
-- 🟢 **Google** & 🐙 **GitHub** providers built in (GitHub falls back to the verified primary email)
-- 👤 **Normalized `User`** — `id`, `nickname`, `name`, `email`, `avatar`, `token`, `raw`
-- 🛡 **CSRF state** helper, custom scopes & extra params
-- 🧩 **Extensible** — add your own provider in a few lines
-- 🧪 Fully unit-tested (no network), pluggable HTTP transport
+- **OAuth 2.0 Authorization Code** flow done for you
+- **Google** & **GitHub** providers built in (GitHub falls back to the verified primary email)
+- **Normalized `User`** — `id`, `nickname`, `name`, `email`, `avatar`, `token`, `raw`
+- **CSRF state** helper, custom scopes & extra params
+- **Extensible** — add your own provider in a few lines
+- Fully unit-tested (no network), pluggable HTTP transport
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 composer require texhub/social-auth
@@ -31,7 +31,7 @@ Requirements: **PHP ≥ 8.2** with `curl`, `json`.
 
 ---
 
-## 🚀 Quick start
+## Quick start
 
 ```php
 use TexHub\SocialAuth\SocialAuth;
@@ -69,7 +69,7 @@ $user->token->refreshToken;  // when available (Google offline access)
 
 ---
 
-## 🟢 Google / 🐙 GitHub
+## Google / GitHub
 
 Both work identically — just switch the driver name:
 
@@ -84,7 +84,7 @@ Override per provider via `scopes`, and add provider params via `extra`
 
 ---
 
-## 🧩 Add your own provider
+## Add your own provider
 
 ```php
 use TexHub\SocialAuth\Providers\AbstractProvider;
@@ -110,7 +110,7 @@ $social->extend('facebook', FacebookProvider::class)
 
 ---
 
-## ⚙️ Error handling
+## Error handling
 
 ```php
 use TexHub\SocialAuth\Exceptions\ApiException;
@@ -127,7 +127,7 @@ try {
 
 ---
 
-## <a name="laravel"></a>🧩 Laravel
+## <a name="laravel"></a> Laravel
 
 Auto-discovered. Publish config:
 
@@ -186,7 +186,7 @@ Route::get('/auth/{provider}/callback', [AuthController::class, 'callback']);
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Inject a fake transport — no network needed:
 
@@ -208,7 +208,7 @@ composer install && composer test
 
 ---
 
-## 📚 Architecture
+## Architecture
 
 ```
 src/
